@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class RoleMapper {
-
+//change to generic
     private ModelMapper modelMapper;
 
     public RoleMapper(ModelMapper modelMapper) {
