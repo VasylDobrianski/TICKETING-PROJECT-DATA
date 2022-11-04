@@ -13,14 +13,14 @@ import java.util.List;
 @Controller
 @RequestMapping("/project")
 public class ProjectController {
-//
-//    private final UserService userService;
-//    private final ProjectService projectService;
-//
-//    public ProjectController(UserService userService, ProjectService projectService) {
-//        this.userService = userService;
-//        this.projectService = projectService;
-//    }
+
+    private final UserService userService;
+    private final ProjectService projectService;
+
+    public ProjectController(UserService userService, ProjectService projectService) {
+        this.userService = userService;
+        this.projectService = projectService;
+    }
 //
 //    @GetMapping("/create")
 //    public String createProject(Model model) {
