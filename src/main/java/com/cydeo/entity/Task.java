@@ -1,6 +1,7 @@
 package com.cydeo.entity;
 
 import com.cydeo.enums.Status;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Where;
@@ -13,6 +14,7 @@ import java.time.LocalDate;
 @Table(name = "tasks")
 @Getter
 @Service
+@Data
 @NoArgsConstructor
 @Where(clause = "is_deleted=false")
 public class Task extends BaseEntity{
@@ -27,7 +29,7 @@ public class Task extends BaseEntity{
     private LocalDate assignedDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "employee_id")
+    @JoinColumn(name = "assigned_employee_id")
     private User assignedEmployee;
 
     @ManyToOne(fetch = FetchType.LAZY)
