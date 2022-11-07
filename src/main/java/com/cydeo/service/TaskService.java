@@ -1,5 +1,6 @@
 package com.cydeo.service;
 
+import com.cydeo.dto.ProjectDTO;
 import com.cydeo.dto.TaskDTO;
 import com.cydeo.entity.Task;
 import org.springframework.stereotype.Service;
@@ -20,5 +21,7 @@ public interface TaskService {
 
     int totalCompletedTask(String projectCode);
 
+    void deleteByProject(ProjectDTO convertToDto);
 
+    void completeByProject(ProjectDTO convertToDto);
 }
